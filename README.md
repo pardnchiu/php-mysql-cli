@@ -1,9 +1,9 @@
 # PD\SQL
 
-> A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO, this library offers a chainable API that makes database interactions more intuitive and maintainable.
+> A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO.
 
 ![tag](https://img.shields.io/badge/tag-PHP%20Library-bb4444) 
-![size](https://img.shields.io/github/size/pardnchiu/PHPSQL/src/SQL.php)<br>
+![size](https://img.shields.io/github/size/pardnchiu/PHP-SQL/src/SQL.php)<br>
 ![version](https://img.shields.io/packagist/v/pardnchiu/sql)
 ![download](https://img.shields.io/packagist/dm/pardnchiu/sql)
 
@@ -72,7 +72,7 @@ $result_user_1 = SQL::query(
 
 ## License
 
-This source code project is licensed under the [MIT](https://github.com/pardnchiu/PHPSQL/blob/main/LICENSE) license.
+This source code project is licensed under the [MIT](https://github.com/pardnchiu/PHP-SQL/blob/main/LICENSE) license.
 
 ## Creator
 

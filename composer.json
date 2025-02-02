@@ -1,6 +1,6 @@
 {
     "name": "pardnchiu/sql",
-    "description": "A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO, this library offers a chainable API that makes database interactions more intuitive and maintainable.",
+    "description": "A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO.",
     "type": "library",
     "license": "MIT",
     "authors": [
