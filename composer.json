@@ -1,0 +1,41 @@
+{
+    "name": "pardnchiu/sql",
+    "description": "A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO, this library offers a chainable API that makes database interactions more intuitive and maintainable.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "邱敬幃 Pardn Chiu",
+            "email": "dev@pardn.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "PD\\": "src/"
+        },
+        "exclude-from-classmap": [
+            ".gitignore",
+            "*.md",
+            "composer.json"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "scripts": {
+    },
+    "extra": {
+        "branch-alias": {
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
