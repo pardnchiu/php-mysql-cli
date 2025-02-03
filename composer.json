@@ -1,6 +1,6 @@
 {
     "name": "pardnchiu/sql",
-    "description": "A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO.",
+    "description": "PD\\SQL is a PDO-based SQL query builder that provides an elegant and secure way to construct and execute database queries in PHP.",
     "type": "library",
     "keywords": [
         "php",
