@@ -1,6 +1,6 @@
 # PD\SQL
 
-> A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO.
+> PD\SQL is a PDO-based SQL query builder that provides an elegant and secure way to construct and execute database queries in PHP.
 
 ![tag](https://img.shields.io/badge/tag-PHP%20Library-bb4444) 
 ![size](https://img.shields.io/github/size/pardnchiu/PHP-SQL/src/SQL.php)<br>
@@ -35,39 +35,54 @@
 
 ### Install
 
-```SHELL
+```shell
 composer require pardnchiu/sql
 ```
 
-### Use
-
-```PHP
+```php
 <?php
 
 use PD\SQL;
 
 $result_user_0 = SQL::table('users')
-   ->where('status', 'active')
-   ->where('age', '>', 18)
+   ->where("status", "active")
+   ->where("age", ">", 18)
    ->get();
 
-$result_order = SQL::table('orders')
-   ->select('orders.*', 'users.name')
-   ->join('users', 'orders.user_id', 'users.id')
-   ->where('orders.status', 'pending')
+$result_order = SQL::table("orders")
+   ->select("orders.*", "users.name")
+   ->join("users", "orders.user_id", "users.id")
+   ->where("orders.status", "pending")
    ->get();
 
-$result_product = SQL::table('products')
+$result_product = SQL::table("products")
    ->total()
    ->limit(10)
    ->offset(0)
-   ->order_by('created_at', 'DESC')
+   ->order_by("created_at", "DESC")
    ->get();
 
 $result_user_1 = SQL::query(
     "SELECT * FROM users WHERE status = ? AND role = ?",
-    ['active', 'admin']
+    ["active", "admin"]
 );
+
+try {
+    $result = SQL::table("users")
+        ->where("id", 1)
+        ->update([
+            "status" => "active",
+            "updated_at" => "NOW()"
+        ]);
+
+    if (!empty($result["info"])) {
+        echo "Performance: " . $result["info"];
+    };
+} catch (\PDOException $e) {
+    echo "Database Error: " . $e->getMessage();
+} catch (\Exception $e) {
+    echo "General Error: " . $e->getMessage();
+};
 ```
 
 ## License

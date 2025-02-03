@@ -76,7 +76,7 @@ class SQL
         if (is_string($fields)) {
             $fields = func_get_args();
         };
-        
+
         self::$selects = $fields;
 
         return new static();
@@ -261,7 +261,7 @@ class SQL
     public static function query($query, $params = [])
     {
         if (!isset(self::$client)) {
-            throw new \Exception("[no_database]");
+            throw new \Exception("數據庫連接未初始化");
         }
 
         try {
@@ -281,9 +281,9 @@ class SQL
                             break;
                         default:
                             $stmt->bindValue($index + 1, $val, \PDO::PARAM_STR);
-                    }
-                }
-            }
+                    };
+                };
+            };
 
             $start = microtime(true) * 1000;
             $stmt->execute();
@@ -291,22 +291,29 @@ class SQL
             $ms = number_format($end - $start, 2);
 
             if ($ms > 20) {
-                PrintDebug("[" . $ms . "ms] [" . $query . "]");
-            }
+                $info = sprintf("[Info] PD\SQL: [Slow Query: %sms] [%s]", $ms, $query);
+                error_log($info);
+            };
 
             if (stripos($query, "UPDATE") === 0 || stripos($query, "INSERT") === 0) {
                 return [
+                    "info" => $info ?? "",
                     "insert_id" => self::$client->lastInsertId(),
                     "affected_rows" => $stmt->rowCount()
                 ];
-            }
+            };
 
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
-            http_response_code(500);
-            PrintError("[MysqlClient] [" . $e->getMessage() . "]");
-            return null;
-        }
+            $info = $e->errorInfo ?? null;
+            $code = $info[1] ?? $e->getCode();
+            $message = $info[2] ?? $e->getMessage();
+            $result = sprintf("[Error] PD\SQL: [Code: %s] [Message: %s] [%s]", $code, $message);
+
+            error_log($result);
+
+            throw new \PDOException($result, (int) $code, $e);
+        };
     }
 
     public static function close()

@@ -2,19 +2,40 @@
     "name": "pardnchiu/sql",
     "description": "A fluent SQL query builder for PHP that provides an elegant and safe way to build and execute database queries. Built on top of PDO.",
     "type": "library",
+    "keywords": [
+        "php",
+        "sql",
+        "mysql",
+        "database",
+        "query-builder",
+        "pdo",
+        "orm",
+        "mysql-pdo",
+        "pardnchiu",
+        "邱敬幃"
+    ],
+    "homepage": "https://pardn.io",
     "license": "MIT",
     "authors": [
         {
             "name": "邱敬幃 Pardn Chiu",
-            "email": "dev@pardn.io"
+            "email": "dev@pardn.io",
+            "homepage": "https://pardn.io",
+            "role": "Developer"
         }
     ],
+    "support": {
+        "email": "dev@pardn.io",
+        "issues": "https://github.com/pardnchiu/PHP-SQL/issues",
+        "source": "https://github.com/pardnchiu/PHP-SQL",
+        "docs": "https://github.com/pardnchiu/PHP-SQL/blob/main/README.md"
+    },
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "php": ">=8.0"
     },
-    "require-dev": {
-    },
+    "require-dev": {},
     "autoload": {
         "psr-4": {
             "PD\\": "src/"
@@ -26,16 +47,22 @@
         ]
     },
     "autoload-dev": {
-        "psr-4": {
-        }
+        "psr-4": {}
     },
-    "scripts": {
-    },
+    "scripts": {},
     "extra": {
-        "branch-alias": {
-        }
+        "branch-alias": {}
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "archive": {
+        "exclude": [
+            "/.git",
+            "/*.md",
+            "/.gitignore"
+        ]
     }
 }
