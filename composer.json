@@ -1,5 +1,5 @@
 {
-    "name": "pardnchiu/phpMysqlPool",
+    "name": "pardnchiu/php-mysql-pool",
     "description": "PD\\SQL is a PDO-based SQL query builder that provides an elegant and secure way to construct and execute database queries in PHP.",
     "type": "library",
     "keywords": [
