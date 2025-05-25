@@ -1,5 +1,5 @@
 {
-    "name": "pardnchiu/mysql-pool",
+    "name": "pardnchiu/phpMysqlPool",
     "description": "PD\\SQL is a PDO-based SQL query builder that provides an elegant and secure way to construct and execute database queries in PHP.",
     "type": "library",
     "keywords": [
@@ -26,9 +26,9 @@
     ],
     "support": {
         "email": "dev@pardn.io",
-        "issues": "https://github.com/pardnchiu/PHP-SQL/issues",
-        "source": "https://github.com/pardnchiu/PHP-SQL",
-        "docs": "https://github.com/pardnchiu/PHP-SQL/blob/main/README.md"
+        "issues": "https://github.com/pardnchiu/php-mysql-pool/issues",
+        "source": "https://github.com/pardnchiu/php-mysql-pool",
+        "docs": "https://github.com/pardnchiu/php-mysql-pool/blob/main/README.md"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
