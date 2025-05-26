@@ -1,68 +1,64 @@
 {
-    "name": "pardnchiu/php-mysql-pool",
-    "description": "PD\\SQL is a PDO-based SQL query builder that provides an elegant and secure way to construct and execute database queries in PHP.",
-    "type": "library",
-    "keywords": [
-        "php",
-        "sql",
-        "mysql",
-        "database",
-        "query-builder",
-        "pdo",
-        "orm",
-        "mysql-pdo",
-        "pardnchiu",
-        "邱敬幃"
-    ],
-    "homepage": "https://pardn.io",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "邱敬幃 Pardn Chiu",
-            "email": "dev@pardn.io",
-            "homepage": "https://pardn.io",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "email": "dev@pardn.io",
-        "issues": "https://github.com/pardnchiu/php-mysql-pool/issues",
-        "source": "https://github.com/pardnchiu/php-mysql-pool",
-        "docs": "https://github.com/pardnchiu/php-mysql-pool/blob/main/README.md"
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=8.0"
-    },
-    "require-dev": {},
-    "autoload": {
-        "psr-4": {
-            "PD\\": "src/"
-        },
-        "exclude-from-classmap": [
-            ".gitignore",
-            "*.md",
-            "composer.json"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {}
-    },
-    "scripts": {},
-    "extra": {
-        "branch-alias": {}
-    },
-    "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true,
-        "preferred-install": "dist"
-    },
-    "archive": {
-        "exclude": [
-            "/.git",
-            "/*.md",
-            "/.gitignore"
-        ]
+  "name": "pardnchiu/mysql-pool",
+  "description": "A MySQL connection pool solution designed specifically for PHP, featuring intuitive chaining syntax that integrates query builder capabilities with read-write separation.",
+  "type": "library",
+  "keywords": [
+    "php",
+    "PDO",
+    "chain-syntax",
+    "mysql",
+    "邱敬幃",
+    "pardnchiu"
+  ],
+  "homepage": "https://pardn.io",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "邱敬幃 Pardn Chiu",
+      "email": "dev@pardn.io",
+      "homepage": "https://pardn.io",
+      "role": "Developer"
     }
+  ],
+  "support": {
+    "email": "dev@pardn.io",
+    "issues": "https://github.com/pardnchiu/php-mysql-pool/issues",
+    "source": "https://github.com/pardnchiu/php-mysql-pool",
+    "docs": "https://github.com/pardnchiu/php-mysql-pool/blob/main/README.md"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "pardnchiu\\": "src/"
+    },
+    "exclude-from-classmap": [
+      ".gitignore",
+      "*.md",
+      "composer.json"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  },
+  "scripts": {},
+  "extra": {
+    "branch-alias": {}
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "archive": {
+    "exclude": [
+      "/.git",
+      "/*.md",
+      "/.gitignore"
+    ]
+  }
 }

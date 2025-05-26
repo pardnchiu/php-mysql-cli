@@ -1,8 +1,8 @@
 <?php
 
-namespace PD;
+namespace pardnchiu;
 
-class SQL
+class MySQLPool
 {
     private static $client;
     private static $table;
