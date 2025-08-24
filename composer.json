@@ -1,6 +1,6 @@
 {
-  "name": "pardnchiu/mysql-pool",
-  "description": "A MySQL connection pool solution designed specifically for PHP, featuring intuitive chaining syntax that integrates query builder capabilities with read-write separation.",
+  "name": "pardnchiu/mysql-cli",
+  "description": "A lightweight MySQL client for PHP featuring intuitive chaining syntax with query builder capabilities and read-write separation.",
   "type": "library",
   "keywords": [
     "php",
@@ -22,9 +22,9 @@
   ],
   "support": {
     "email": "dev@pardn.io",
-    "issues": "https://github.com/pardnchiu/php-mysql-pool/issues",
-    "source": "https://github.com/pardnchiu/php-mysql-pool",
-    "docs": "https://github.com/pardnchiu/php-mysql-pool/blob/main/README.md"
+    "issues": "https://github.com/pardnchiu/php-mysql-cli/issues",
+    "source": "https://github.com/pardnchiu/php-mysql-cli",
+    "docs": "https://github.com/pardnchiu/php-mysql-cli/blob/main/README.md"
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
